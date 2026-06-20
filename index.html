@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Academic Advising Expert System</title>
+<style>
+body{
+font-family:Arial;
+background:#111;
+color:white;
+text-align:center;
+padding:40px;
+}
+
+.container{
+background:#222;
+padding:20px;
+border-radius:10px;
+width:500px;
+margin:auto;
+}
+
+button{
+padding:10px 20px;
+font-size:16px;
+cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Academic Advising Expert System</h1>
+
+<input id="cgpa" type="number" placeholder="Enter CGPA">
+
+<br><br>
+
+<button onclick="checkEligibility()">
+Check Eligibility
+</button>
+
+<h2 id="result"></h2>
+
+</div>
+
+<script>
+
+function checkEligibility(){
+
+let cgpa=document.getElementById("cgpa").value;
+
+if(cgpa>=7.5)
+{
+document.getElementById("result").innerHTML=
+"✅ Eligible for Machine Learning";
+}
+else
+{
+document.getElementById("result").innerHTML=
+"❌ Not Eligible";
+}
+
+}
+
+</script>
+
+</body>
+</html>
